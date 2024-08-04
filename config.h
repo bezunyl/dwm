@@ -7,8 +7,8 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char *fonts[]          = { "terminus:size=10" };
+static const char dmenufont[]       = "terminus:size=10";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -30,7 +30,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       0,       0,           -1 },
+	{ "Firefox",  NULL,       NULL,       0,	    0,           -1 },
 };
 
 /* layout(s) */
@@ -99,9 +99,6 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_e,      quit,           {0} },
 	{ MODKEY|ShiftMask,		XK_l, 	   spawn,	   SHCMD("slock") },
-	{ 0,				XF86XK_AudioLowerVolume, spawn, SHCMD("amixer -q sset Master 5%- unmute") },
-	{ 0,				XF86XK_AudioRaiseVolume, spawn, SHCMD("amixer -q sset Master 5%+ unmute") },
-	{ 0,				XF86XK_AudioMute, spawn, SHCMD("amixer -q sset Master toggle") },
 };
 
 /* button definitions */
